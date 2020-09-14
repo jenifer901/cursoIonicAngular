@@ -2,7 +2,7 @@
 
 ## Instrucciones para los alumnos
 
-Para facilitar las correcciones, cada alumno creará un repositorio **privado** en su cuenta de GitHub, y dará acceso como colaborador a los siguientes usuarios: **fpachecoibz**.
+Para facilitar las correcciones, cada alumno creará un repositorio **privado** en su cuenta de GitHub, y dará acceso como colaborador a los siguientes usuarios: **fpachecoibz** y **Saul-** (nótese el guión al final).
 
 El nombre del repositorio tendrá el siguiente formato: **ionicAngular_nombre_apell1_apell2**
 
