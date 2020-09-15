@@ -57,3 +57,64 @@ body h1 {
 .container .details > .detail-line .value.danger {
   color: red;
 }
+
+@import './mixins';
+
+$size: 50px;
+
+$colors: (
+  azul: blue,
+  rojo: red,
+  verde: green,
+  naranja: orange
+);
+
+body {
+  font-family: sans-serif;
+  
+  h1 {
+    color: map-get($colors, azul);
+  }
+  
+  .container {
+    display: block;
+    @include rectangulo($size * 100, 100%);
+    
+    .avatar {
+      display: block;
+      @include rectangulo($size, $size);
+    }
+    
+    .details {
+      padding: 5px;
+      
+      > .detail-line {
+        width: $size * 2;
+        
+        &:first-child {
+          background: map-get($colors, rojo);
+        }
+        
+        .label {
+          width: $size - 20;
+        }
+        
+        .value {
+          width: $size + 20;
+          
+          &.fine {
+            color: map-get($colors, verde);
+          }
+          
+          &.warn {
+            color: map-get($colors, naranja);
+          } 
+          
+          &.danger {
+            color: map-get($colors, azul);
+          }
+        }
+      }
+    }
+  }
+}
