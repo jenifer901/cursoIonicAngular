@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { Fruit } from '../models/fruit.model';
 
 @Component({
@@ -10,9 +11,12 @@ export class FruitsListPage implements OnInit {
 
   public fruits: Fruit[];
 
-  constructor() {
-
-  }
+  /**
+   * constructor
+   *
+   * @param navController ionic-angular nav controller
+   */
+  constructor(private readonly navController: NavController) { }
 
   public ngOnInit(): void {
 
@@ -72,8 +76,11 @@ export class FruitsListPage implements OnInit {
     ];
   }
 
-  public deleteFruit(index: number): void {
+  public sandboxClick(): void {
+    console.log('TODO: Navigate to sandbox page');
+  }
 
+  public deleteFruit(index: number): void {
     console.log('TODO: Remove fruit index', index);
   }
 }
